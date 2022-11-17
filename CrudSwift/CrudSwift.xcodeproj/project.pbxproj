@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B16BE9D829269A40000580C4 /* Lista.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BE9D729269A40000580C4 /* Lista.swift */; };
 		CF3A861E2922A367000CCB5E /* CrudSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A861D2922A367000CCB5E /* CrudSwiftApp.swift */; };
 		CF3A86202922A367000CCB5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A861F2922A367000CCB5E /* ContentView.swift */; };
 		CF3A86222922A368000CCB5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3A86212922A368000CCB5E /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B16BE9D729269A40000580C4 /* Lista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lista.swift; sourceTree = "<group>"; };
 		CF3A861A2922A367000CCB5E /* CrudSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrudSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF3A861D2922A367000CCB5E /* CrudSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrudSwiftApp.swift; sourceTree = "<group>"; };
 		CF3A861F2922A367000CCB5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		CF3A861C2922A367000CCB5E /* CrudSwift */ = {
 			isa = PBXGroup;
 			children = (
+				B16BE9D729269A40000580C4 /* Lista.swift */,
 				CF3A86342922A9D9000CCB5E /* Anadir.swift */,
 				CF3A86322922A9CC000CCB5E /* Modificar.swift */,
 				CF3A86302922A78B000CCB5E /* Consultar.swift */,
@@ -155,6 +158,7 @@
 				CF3A86332922A9CC000CCB5E /* Modificar.swift in Sources */,
 				CF3A86312922A78B000CCB5E /* Consultar.swift in Sources */,
 				CF3A86272922A368000CCB5E /* Persistence.swift in Sources */,
+				B16BE9D829269A40000580C4 /* Lista.swift in Sources */,
 				CF3A862A2922A368000CCB5E /* CrudSwift.xcdatamodeld in Sources */,
 				CF3A86202922A367000CCB5E /* ContentView.swift in Sources */,
 				CF3A86352922A9D9000CCB5E /* Anadir.swift in Sources */,

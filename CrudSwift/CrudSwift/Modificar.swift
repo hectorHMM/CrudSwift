@@ -16,9 +16,6 @@ struct Modificar: View {
                         .frame(height: 200)
                     Text("Modificar")
                         .padding(.top, 32)
-                }.tabItem {
-                    Image(systemName: "pencil.circle")
-                    Text("Modificar")
                 }
     }
 }

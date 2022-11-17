@@ -12,20 +12,31 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Usuario.id, ascending: true)],
         animation: .default)
-    private var items: FetchedResults<Item>
+    private var items: FetchedResults<Usuario>
 
     var body: some View {
         TabView{
-                    Text("Home")
-                        .tabItem {
-                            Image(systemName: "list.number")
-                            Text("Home")
-                        }
+            Lista()
+                .tabItem{
+                    Image(systemName: "list.number")
+                    Text("Lista")
+                }
             Consultar()
-            Anadir()
-            Modificar()
+                .tabItem{
+                    Image(systemName: "person.crop.circle")
+                    Text("Consultar")
+                }
+            Anadir().tabItem{
+                Image(systemName: "person.badge.plus")
+                Text("Anadir")
+            }
+            Modificar().tabItem{
+                Image(systemName: "pencil.circle")
+                Text("Modificar")
+            }
+            
         }
     }
 }

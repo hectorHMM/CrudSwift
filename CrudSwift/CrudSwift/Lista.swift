@@ -1,27 +1,27 @@
 //
-//  Anadir.swift
+//  Lista.swift
 //  CrudSwift
 //
-//  Created by CCDM16 on 14/11/22.
+//  Created by CCDM22 on 17/11/22.
 //
 
 import SwiftUI
 
-struct Anadir: View {
+struct Lista: View {
     var body: some View {
         VStack {
-                    Image(systemName: "person.badge.plus")
+                    Image(systemName: "list.number")
                         .resizable()
                         .scaledToFit()
                         .frame(height: 200)
-                    Text("Anadir")
+                    Text("Lista")
                         .padding(.top, 32)
                 }
     }
 }
 
-struct Anadir_Previews: PreviewProvider {
+struct Lista_Previews: PreviewProvider {
     static var previews: some View {
-        Anadir()
+        Lista()
     }
 }
