@@ -10,13 +10,10 @@ import SwiftUI
 struct Lista: View {
     var body: some View {
         VStack {
-                    Image(systemName: "list.number")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 200)
-                    Text("Lista")
-                        .padding(.top, 32)
-                }
+            List {
+                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Content")/*@END_MENU_TOKEN@*/
+            }
+        }
     }
 }
 

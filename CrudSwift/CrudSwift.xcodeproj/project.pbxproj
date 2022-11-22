@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B12662AA292D368B00DB8E93 /* Usuario.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B12662A8292D368B00DB8E93 /* Usuario.xcdatamodeld */; };
+		B12662AC292D371900DB8E93 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12662AB292D371900DB8E93 /* CoreDataManager.swift */; };
 		B16BE9D829269A40000580C4 /* Lista.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BE9D729269A40000580C4 /* Lista.swift */; };
 		CF3A861E2922A367000CCB5E /* CrudSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A861D2922A367000CCB5E /* CrudSwiftApp.swift */; };
 		CF3A86202922A367000CCB5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A861F2922A367000CCB5E /* ContentView.swift */; };
 		CF3A86222922A368000CCB5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3A86212922A368000CCB5E /* Assets.xcassets */; };
 		CF3A86252922A368000CCB5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3A86242922A368000CCB5E /* Preview Assets.xcassets */; };
-		CF3A86272922A368000CCB5E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A86262922A368000CCB5E /* Persistence.swift */; };
-		CF3A862A2922A368000CCB5E /* CrudSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF3A86282922A368000CCB5E /* CrudSwift.xcdatamodeld */; };
 		CF3A86312922A78B000CCB5E /* Consultar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A86302922A78B000CCB5E /* Consultar.swift */; };
 		CF3A86332922A9CC000CCB5E /* Modificar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A86322922A9CC000CCB5E /* Modificar.swift */; };
 		CF3A86352922A9D9000CCB5E /* Anadir.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A86342922A9D9000CCB5E /* Anadir.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B12662A9292D368B00DB8E93 /* Usuario.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Usuario.xcdatamodel; sourceTree = "<group>"; };
+		B12662AB292D371900DB8E93 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B16BE9D729269A40000580C4 /* Lista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lista.swift; sourceTree = "<group>"; };
 		CF3A861A2922A367000CCB5E /* CrudSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrudSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF3A861D2922A367000CCB5E /* CrudSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrudSwiftApp.swift; sourceTree = "<group>"; };
 		CF3A861F2922A367000CCB5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CF3A86212922A368000CCB5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF3A86242922A368000CCB5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CF3A86262922A368000CCB5E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		CF3A86292922A368000CCB5E /* CrudSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CrudSwift.xcdatamodel; sourceTree = "<group>"; };
 		CF3A86302922A78B000CCB5E /* Consultar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consultar.swift; sourceTree = "<group>"; };
 		CF3A86322922A9CC000CCB5E /* Modificar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modificar.swift; sourceTree = "<group>"; };
 		CF3A86342922A9D9000CCB5E /* Anadir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anadir.swift; sourceTree = "<group>"; };
@@ -70,9 +70,9 @@
 				CF3A861D2922A367000CCB5E /* CrudSwiftApp.swift */,
 				CF3A861F2922A367000CCB5E /* ContentView.swift */,
 				CF3A86212922A368000CCB5E /* Assets.xcassets */,
-				CF3A86262922A368000CCB5E /* Persistence.swift */,
-				CF3A86282922A368000CCB5E /* CrudSwift.xcdatamodeld */,
 				CF3A86232922A368000CCB5E /* Preview Content */,
+				B12662A8292D368B00DB8E93 /* Usuario.xcdatamodeld */,
+				B12662AB292D371900DB8E93 /* CoreDataManager.swift */,
 			);
 			path = CrudSwift;
 			sourceTree = "<group>";
@@ -157,11 +157,11 @@
 			files = (
 				CF3A86332922A9CC000CCB5E /* Modificar.swift in Sources */,
 				CF3A86312922A78B000CCB5E /* Consultar.swift in Sources */,
-				CF3A86272922A368000CCB5E /* Persistence.swift in Sources */,
 				B16BE9D829269A40000580C4 /* Lista.swift in Sources */,
-				CF3A862A2922A368000CCB5E /* CrudSwift.xcdatamodeld in Sources */,
+				B12662AA292D368B00DB8E93 /* Usuario.xcdatamodeld in Sources */,
 				CF3A86202922A367000CCB5E /* ContentView.swift in Sources */,
 				CF3A86352922A9D9000CCB5E /* Anadir.swift in Sources */,
+				B12662AC292D371900DB8E93 /* CoreDataManager.swift in Sources */,
 				CF3A861E2922A367000CCB5E /* CrudSwiftApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,13 +365,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CF3A86282922A368000CCB5E /* CrudSwift.xcdatamodeld */ = {
+		B12662A8292D368B00DB8E93 /* Usuario.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CF3A86292922A368000CCB5E /* CrudSwift.xcdatamodel */,
+				B12662A9292D368B00DB8E93 /* Usuario.xcdatamodel */,
 			);
-			currentVersion = CF3A86292922A368000CCB5E /* CrudSwift.xcdatamodel */;
-			path = CrudSwift.xcdatamodeld;
+			currentVersion = B12662A9292D368B00DB8E93 /* Usuario.xcdatamodel */;
+			path = Usuario.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
