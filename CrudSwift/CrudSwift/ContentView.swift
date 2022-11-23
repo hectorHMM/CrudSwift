@@ -9,13 +9,14 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
+    //@Environment(\.managedObjectContext) private var viewContext
 
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Usuario.id, ascending: true)],
-        animation: .default)
+    //@FetchRequest(
+    //    sortDescriptors: [NSSortDescriptor(keyPath: \Usuario.id, ascending: true)],
+    //    animation: .default)
     private var items: FetchedResults<Usuario>
-
+    let coreDM: CoreDataManager
+    
     var body: some View {
         TabView{
             Lista()
@@ -43,7 +44,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(coreDM: CoreDataManager())
     }
 }
 

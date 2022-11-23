@@ -63,6 +63,7 @@
 		CF3A861C2922A367000CCB5E /* CrudSwift */ = {
 			isa = PBXGroup;
 			children = (
+				B12662AB292D371900DB8E93 /* CoreDataManager.swift */,
 				B16BE9D729269A40000580C4 /* Lista.swift */,
 				CF3A86342922A9D9000CCB5E /* Anadir.swift */,
 				CF3A86322922A9CC000CCB5E /* Modificar.swift */,
@@ -72,7 +73,6 @@
 				CF3A86212922A368000CCB5E /* Assets.xcassets */,
 				CF3A86232922A368000CCB5E /* Preview Content */,
 				B12662A8292D368B00DB8E93 /* Usuario.xcdatamodeld */,
-				B12662AB292D371900DB8E93 /* CoreDataManager.swift */,
 			);
 			path = CrudSwift;
 			sourceTree = "<group>";

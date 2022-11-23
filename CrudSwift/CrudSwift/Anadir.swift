@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct Anadir: View {
-    @State private var nombre = ""
-    @State private var apellido = ""
-    @State private var username = ""
-    @State private var activo = false
-    @State private var rolid = 0
+    @State private var nombre:String = ""
+    @State private var apellido:String = ""
+    @State private var username:String = ""
+    @State private var activo:Bool = false
+    @State private var id:Int16 = 0
+    @State private var rolid:Int16 = 0
+    @State private var userArray = [Usuario]()
+    
     var body: some View {
         VStack {
             TextField("Nombre", text: $nombre)
@@ -40,16 +43,22 @@ struct Anadir: View {
             }
             .pickerStyle(SegmentedPickerStyle())
             Spacer()
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                Text("Crear")
+            Button("Guardar") {
+                coreDM.guardarUsuario(id: id, rolid: rolid, apellido: apellido, nombre: nombre, username: username, activo: activo)
+                id = 0
+                rolid = 0
+                apellido = ""
+                nombre = ""
+                username = ""
+                activo = false
             }
             Spacer()
-        }
+        }.padding()
     }
 }
 
 struct Anadir_Previews: PreviewProvider {
     static var previews: some View {
-        Anadir()
+        Anadir(coreDM: CoreDataManager())
     }
 }
