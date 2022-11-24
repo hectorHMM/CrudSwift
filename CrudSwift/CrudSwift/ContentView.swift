@@ -20,7 +20,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView{
-            Lista(coreDM: CoreDataManager)
+            Lista(coreDM: coreDM)
                 .tabItem{
                     Image(systemName: "list.number")
                     Text("Lista")

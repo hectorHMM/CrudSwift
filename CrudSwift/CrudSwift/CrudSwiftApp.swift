@@ -13,7 +13,7 @@ struct CrudSwiftApp: App {
     //let coreDM: CoreDataManager
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(coreDM: CoreDataManager())
                 //.environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

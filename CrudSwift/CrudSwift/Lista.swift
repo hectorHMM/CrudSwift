@@ -20,6 +20,6 @@ struct Lista: View {
 
 struct Lista_Previews: PreviewProvider {
     static var previews: some View {
-        Lista()
+        Lista(coreDM: CoreDataManager())
     }
 }
