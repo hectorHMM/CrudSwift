@@ -12,14 +12,15 @@ struct ContentView: View {
     //@Environment(\.managedObjectContext) private var viewContext
 
     //@FetchRequest(
-    //    sortDescriptors: [NSSortDescriptor(keyPath: \Usuario.id, ascending: true)],
+     //   sortDescriptors: [NSSortDescriptor(keyPath: \Usuario.id, ascending: true)],
     //    animation: .default)
-    private var items: FetchedResults<Usuario>
+    //private var items: FetchedResults<Usuario>
     let coreDM: CoreDataManager
+    //let persistenceController = PersistenceController.shared
     
     var body: some View {
         TabView{
-            Lista()
+            Lista(coreDM: CoreDataManager)
                 .tabItem{
                     Image(systemName: "list.number")
                     Text("Lista")

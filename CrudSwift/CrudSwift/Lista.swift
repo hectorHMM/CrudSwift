@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Lista: View {
+    let coreDM: CoreDataManager
     var body: some View {
         VStack {
             List {

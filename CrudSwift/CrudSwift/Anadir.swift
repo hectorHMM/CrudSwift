@@ -15,6 +15,7 @@ struct Anadir: View {
     @State private var id:Int16 = 0
     @State private var rolid:Int16 = 0
     @State private var userArray = [Usuario]()
+    let persistenceController = PersistenceController.shared
     
     var body: some View {
         VStack {
@@ -44,7 +45,7 @@ struct Anadir: View {
             .pickerStyle(SegmentedPickerStyle())
             Spacer()
             Button("Guardar") {
-                coreDM.guardarUsuario(id: id, rolid: rolid, apellido: apellido, nombre: nombre, username: username, activo: activo)
+                //coreDM.guardarUsuario(id: id, rolid: rolid, apellido: apellido, nombre: nombre, username: username, activo: activo)
                 id = 0
                 rolid = 0
                 apellido = ""
@@ -59,6 +60,6 @@ struct Anadir: View {
 
 struct Anadir_Previews: PreviewProvider {
     static var previews: some View {
-        Anadir(coreDM: CoreDataManager())
+        Anadir()
     }
 }

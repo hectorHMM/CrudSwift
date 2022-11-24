@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct CrudSwiftApp: App {
     //let persistenceController = PersistenceController.shared
-    let coreDM: CoreDataManager
+    //let coreDM: CoreDataManager
     var body: some Scene {
         WindowGroup {
             ContentView()
