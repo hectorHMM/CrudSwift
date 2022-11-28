@@ -12,13 +12,16 @@ struct Anadir: View {
     @State private var apellido:String = ""
     @State private var username:String = ""
     @State private var activo:Bool = false
-    @State private var id:Int16 = 0
-    @State private var rolid:Int16 = 0
-    @State private var userArray = [Usuario]()
-    let persistenceController = PersistenceController.shared
+    @State private var id:String = ""
+    @State private var rolid:String = "Mesero"
+    //@State private var userArray = [Usuario]()
+    let coreDM: CoreDataManager
     
     var body: some View {
         VStack {
+            TextField("ID", text: $id)
+                .textFieldStyle(.roundedBorder)
+                .padding()
             TextField("Nombre", text: $nombre)
                 .textFieldStyle(.roundedBorder)
                 .padding()
@@ -38,16 +41,17 @@ struct Anadir: View {
             .pickerStyle(SegmentedPickerStyle())
 
             Picker(selection: $rolid, label: Text("Roles")){
-                Text("Mesero").tag(1)
-                Text("Cocina").tag(2)
-                Text("Cajero").tag(3)
+                Text("Mesero").tag("1")
+                Text("Cocina").tag("2")
+                Text("Cajero").tag("3")
             }
             .pickerStyle(SegmentedPickerStyle())
+            
             Spacer()
             Button("Guardar") {
-                //coreDM.guardarUsuario(id: id, rolid: rolid, apellido: apellido, nombre: nombre, username: username, activo: activo)
-                id = 0
-                rolid = 0
+                coreDM.guardarUsuario(id: Int16(id)!, rolid: Int16(rolid)!, apellido: apellido, nombre: nombre, username: username, activo: activo)
+                id = ""
+                rolid = "Mesero"
                 apellido = ""
                 nombre = ""
                 username = ""
@@ -60,6 +64,6 @@ struct Anadir: View {
 
 struct Anadir_Previews: PreviewProvider {
     static var previews: some View {
-        Anadir()
+        Anadir(coreDM: CoreDataManager())
     }
 }

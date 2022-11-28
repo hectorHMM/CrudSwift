@@ -32,7 +32,7 @@ class CoreDataManager {
         
         do {
             try persistentContainer.viewContext.save()
-            print("Producto guardado")
+            print("Usuario guardado")
         }
         catch {
             print("Failed to save error en \(error)")
@@ -44,6 +44,7 @@ class CoreDataManager {
         let fetchRequest : NSFetchRequest<Usuario> = Usuario.fetchRequest()
         
         do{
+            print(fetchRequest)
             return try persistentContainer.viewContext.fetch(fetchRequest)
         }
         catch{

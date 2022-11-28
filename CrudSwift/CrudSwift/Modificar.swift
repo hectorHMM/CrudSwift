@@ -14,6 +14,7 @@ struct Modificar: View {
     @State private var activo = false
     @State private var rolid = 0
     @State private var id = ""
+    let coreDM: CoreDataManager
     var body: some View {
         VStack {
             TextField("Numero de empleado", text: $id)
@@ -55,6 +56,6 @@ struct Modificar: View {
 
 struct Modificar_Previews: PreviewProvider {
     static var previews: some View {
-        Modificar()
+        Modificar(coreDM: CoreDataManager())
     }
 }
