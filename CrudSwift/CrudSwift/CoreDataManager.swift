@@ -63,4 +63,41 @@ class CoreDataManager {
             print("Failed to save context \(error.localizedDescription)")
         }
     }
+
+    func actualizarUsuario(usuario: Usuario){
+        let fetchRequest : NSFetchRequest<Usuario> = Usuario.fetchRequest()
+        let predicate = NSPredicate(format: "id = %@", usuario.id ?? "")
+        fetchRequest.predicate = predicate
+
+        do {
+            let datos = try persistentContainer.viewContext.fetch(fetchRequest)
+            let u = datos.first
+            u?.nombre = usuario.nombre
+            u?.apellido = usuario.apellido
+            u?.username = usuario.username
+            u?.activo = usuario.activo
+            u?.rolid = usuario.rolid
+            try persistentContainer.viewContext.save()
+            print("Usuario actualizado")
+        }
+        catch {
+            print("Failed to save error en \(error)")
+        }
+    }
+
+    func leerUsuario(id: String) -> Usuario?{
+        let fetchRequest : NSFetchRequest<Usuario> = Usuario.fetchRequest()
+        let predicate = NSPredicate(format: "id = %@", Int16(id)!)
+        fetchRequest.predicate = predicate
+
+        do{
+            let datos = try persistentContainer.viewContext.fetch(fetchRequest)
+            return datos.first
+        }
+        catch{
+            print("Failed to save error en \(error)")
+        }
+        return nil
+
+    }
 }

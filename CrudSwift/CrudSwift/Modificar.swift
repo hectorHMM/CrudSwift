@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct Modificar: View {
-    @State private var nombre = ""
-    @State private var apellido = ""
-    @State private var username = ""
-    @State private var activo = false
-    @State private var rolid = 0
-    @State private var id = ""
+    @State private var nombre:String = ""
+    @State private var apellido:String = ""
+    @State private var username:String = ""
+    @State private var activo:Bool = false
+    @State private var id:String = ""
+    @State private var rolid:String = "Mesero"
+    @State private var usuario:Usuario
     let coreDM: CoreDataManager
     var body: some View {
         VStack {
@@ -40,15 +41,60 @@ struct Modificar: View {
             .pickerStyle(SegmentedPickerStyle())
 
             Picker(selection: $rolid, label: Text("Roles")){
-                Text("Mesero").tag(1)
-                Text("Cocina").tag(2)
-                Text("Cajero").tag(3)
+                Text("Mesero").tag("1")
+                Text("Cocina").tag("2")
+                Text("Cajero").tag("3")
             }
             .pickerStyle(SegmentedPickerStyle())
             Spacer()
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                Text("Crear")
+            
+            HStack
+            {
+              //Obtener los datos del id escrito
+            Button("Obtener Datos") {
+                usuario = coreDM.leerUsuario(id)
+                nombre = usuario.nombre
+                apellido = usuario.apellido
+                username = usuario.username
+                //Activo
+                if usuario.activo == true {
+                    activo = true
+                } else {
+                    activo = false
+                }
+
+                //Rolid
+                switch usuario.rolid {
+                    case 1:
+                        rolid = "1"
+                    case 2:
+                        rolid = "2"
+                    case 3:
+                        rolid = "3"
+                }
             }
+
+            //Actualizar el Usuario
+            Button("Actualizar Usuario") {
+                usuario.id = Int16(id)!
+                usuario.nombre = nombre
+                usuario.apellido = apellido
+                usuario.username = username
+                usuario.activo = activo
+                usuario.rolid = Int16(rolid)!
+                coreDM.actualizarUsuario(usuario)
+                //limpieza de campos
+                id = ""
+                rolid = "Mesero"
+                apellido = ""
+                nombre = ""
+                username = ""
+                activo = false
+                
+            }
+
+            }
+            
             Spacer()
                 }
     }
