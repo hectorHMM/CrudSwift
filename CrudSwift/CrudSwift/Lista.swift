@@ -9,12 +9,12 @@ import SwiftUI
 
 struct Lista: View {
     @State private var userArray = [Usuario]()
-    let coreDM: CoreDataManager
+    @State var coreDM: CoreDataManager
     var body: some View {
             List {
                 ForEach(userArray, id: \.self){
                     user in
-                    VStack{
+                    VStack(alignment: .center){
                         Text(String(user.id) ?? "")
                         Text(user.nombre ?? "")
                         Text(user.apellido ?? "")
@@ -30,6 +30,7 @@ struct Lista: View {
                     })
                 })
             }.onAppear(perform: {
+                coreDM = CoreDataManager()
                 mostrarUsuarios()
             })
     }
