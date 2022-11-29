@@ -14,7 +14,6 @@ struct Modificar: View {
     @State private var activo:Bool = false
     @State private var id:String = ""
     @State private var rolid:String = "Mesero"
-    @State private var usuario:Usuario
     let coreDM: CoreDataManager
     var body: some View {
         VStack {
@@ -52,7 +51,7 @@ struct Modificar: View {
             {
               //Obtener los datos del id escrito
             Button("Obtener Datos") {
-                usuario = coreDM.leerUsuario(id)
+                var usuario = coreDM.leerUsuario(id)
                 nombre = usuario.nombre
                 apellido = usuario.apellido
                 username = usuario.username
@@ -76,6 +75,7 @@ struct Modificar: View {
 
             //Actualizar el Usuario
             Button("Actualizar Usuario") {
+                var usuario
                 usuario.id = Int16(id)!
                 usuario.nombre = nombre
                 usuario.apellido = apellido
