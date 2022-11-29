@@ -25,11 +25,11 @@ struct ContentView: View {
                     Image(systemName: "list.number")
                     Text("Lista")
                 }
-            Consultar(coreDM: coreDM)
-                .tabItem{
-                    Image(systemName: "person.crop.circle")
-                    Text("Consultar")
-                }
+            //Consultar(coreDM: coreDM)
+            //    .tabItem{
+            //        Image(systemName: "person.crop.circle")
+            //        Text("Consultar")
+            //    }
             Anadir(coreDM: coreDM).tabItem{
                 Image(systemName: "person.badge.plus")
                 Text("Anadir")

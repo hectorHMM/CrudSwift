@@ -19,6 +19,7 @@ struct Anadir: View {
     
     var body: some View {
         VStack {
+            Text("Anadir Usuario")
             TextField("ID", text: $id)
                 .textFieldStyle(.roundedBorder)
                 .padding()

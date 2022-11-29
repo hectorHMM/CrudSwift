@@ -18,6 +18,7 @@ struct Modificar: View {
     let coreDM: CoreDataManager
     var body: some View {
         VStack {
+            Text("Modificar Usuario")
             TextField("Numero de empleado", text: $id)
                 .textFieldStyle(.roundedBorder)
                 .padding()
@@ -78,7 +79,6 @@ struct Modificar: View {
 
             //Actualizar el Usuario
             Button("Actualizar Usuario") {
-                var usuario
                 usuario.id = Int16(id)!
                 usuario.nombre = nombre
                 usuario.apellido = apellido

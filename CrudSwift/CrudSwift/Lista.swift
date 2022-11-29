@@ -11,15 +11,17 @@ struct Lista: View {
     @State private var userArray = [Usuario]()
     @State var coreDM: CoreDataManager
     var body: some View {
+        VStack{
+            Text("Lista de usuarios")
             List {
                 ForEach(userArray, id: \.self){
                     user in
                     VStack(alignment: .center){
-                        Text(String(user.id) ?? "")
-                        Text(user.nombre ?? "")
-                        Text(user.apellido ?? "")
-                        Text(user.username ?? "")
-                        Text(String(user.rolid) ?? "")
+                        Text("ID: \(String(user.id))")
+                        Text("Nombre: \(user.nombre ?? "")")
+                        Text("Apellido: \(user.apellido ?? "")")
+                        Text("Username: \(user.username ?? "")")
+                        Text("Rol ID: \(String(user.rolid) ?? "")")
                     }.padding()
                 }.onDelete(perform: {
                     indexSet in
@@ -29,10 +31,12 @@ struct Lista: View {
                         mostrarUsuarios()
                     })
                 })
-            }.onAppear(perform: {
+            }
+            .onAppear(perform: {
                 coreDM = CoreDataManager()
                 mostrarUsuarios()
             })
+        }
     }
                                   
                                   func mostrarUsuarios() {
