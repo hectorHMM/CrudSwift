@@ -14,6 +14,7 @@ struct Modificar: View {
     @State private var activo:Bool = false
     @State private var id:String = ""
     @State private var rolid:String = "Mesero"
+    @State private var usuario: Usuario = Usuario()
     let coreDM: CoreDataManager
     var body: some View {
         VStack {
@@ -51,10 +52,10 @@ struct Modificar: View {
             {
               //Obtener los datos del id escrito
             Button("Obtener Datos") {
-                var usuario = coreDM.leerUsuario(id)
-                nombre = usuario.nombre
-                apellido = usuario.apellido
-                username = usuario.username
+                usuario = coreDM.leerUsuario(id: id)!
+                nombre = usuario.nombre ?? ""
+                apellido = usuario.apellido ?? ""
+                username = usuario.username ?? ""
                 //Activo
                 if usuario.activo == true {
                     activo = true
@@ -70,6 +71,8 @@ struct Modificar: View {
                         rolid = "2"
                     case 3:
                         rolid = "3"
+                default:
+                    rolid = "1"
                 }
             }
 
@@ -82,7 +85,7 @@ struct Modificar: View {
                 usuario.username = username
                 usuario.activo = activo
                 usuario.rolid = Int16(rolid)!
-                coreDM.actualizarUsuario(usuario)
+                coreDM.actualizarUsuario(usuario: usuario)
                 //limpieza de campos
                 id = ""
                 rolid = "Mesero"

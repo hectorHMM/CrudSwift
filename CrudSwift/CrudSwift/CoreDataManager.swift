@@ -66,7 +66,7 @@ class CoreDataManager {
 
     func actualizarUsuario(usuario: Usuario){
         let fetchRequest : NSFetchRequest<Usuario> = Usuario.fetchRequest()
-        let predicate = NSPredicate(format: "id = %@", usuario.id ?? "")
+        let predicate = NSPredicate(format: "id = %@", String(usuario.id))
         fetchRequest.predicate = predicate
 
         do {
@@ -87,7 +87,7 @@ class CoreDataManager {
 
     func leerUsuario(id: String) -> Usuario?{
         let fetchRequest : NSFetchRequest<Usuario> = Usuario.fetchRequest()
-        let predicate = NSPredicate(format: "id = %@", Int16(id)!)
+        let predicate = NSPredicate(format: "id = %@", id)
         fetchRequest.predicate = predicate
 
         do{
